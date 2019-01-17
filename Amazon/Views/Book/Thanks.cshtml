@@ -1,0 +1,21 @@
+﻿
+@model Amazon.Models.Book
+@{
+    Layout = "_Layout";
+}
+
+<div class="text-center">
+    <p>
+        <h1>Gracias, por registrar el libro @Model.Title!</h1>
+        @if (@Model.Price > 100)
+        {
+            @:Aunque parece un poco caro XD.
+        }
+        else
+        {
+            @:El precio parece razonable.
+        }
+
+    </p>
+    <p>Click <a class="nav-link" asp-action="ListResponses">here</a>para ver la lista de Libros.</p>
+</div>
