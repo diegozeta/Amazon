@@ -26,8 +26,12 @@ namespace Amazon.Models
                       Author ="GGamarra",
                       NroPages =400,
                       LevelStock =LevelStock.InStock}
-            }.AsQueryable<Book>();
+        }
+        .AsQueryable<Book>();
 
-    
+        public void SaveBook(Book book)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

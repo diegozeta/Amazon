@@ -97,7 +97,7 @@ namespace Amazon.Test
             // Act - reset the cart
             target.Clear();
             // Assert
-            Assert.Equal(0, target.Lines.Count());
+            Assert.Empty(target.Lines);
         }
  
     }

@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+
 namespace Amazon.Models
 {
     public interface IOrderRepository

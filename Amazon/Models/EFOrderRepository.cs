@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Linq;
+
 namespace Amazon.Models
 {
     public class EFOrderRepository : IOrderRepository
@@ -10,9 +11,8 @@ namespace Amazon.Models
             context = ctx;
         }
         public IQueryable<Order> Orders => context.Orders
-        .Include(o => o.Lines)
-        .ThenInclude(l => l.Book);
-
+                                            .Include(o => o.Lines)
+                                            .ThenInclude(l => l.Book);
         public void SaveOrder(Order order)
         {
             context.AttachRange(order.Lines.Select(l => l.Book));
